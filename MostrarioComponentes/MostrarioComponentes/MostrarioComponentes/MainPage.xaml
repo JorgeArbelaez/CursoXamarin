@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="MostrarioComponentes.MainPage">
+    <StackLayout HorizontalOptions="Center" >
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="6*" />
+            </Grid.RowDefinitions>
+            <StackLayout>
+                <BoxView Color="Red" />
+            </StackLayout>
+            <StackLayout Grid.Row="1" Orientation="Horizontal">
+                <BoxView Color="Aquamarine" />
+                <BoxView Color="Green" />
+                <StackLayout>
+                    <BoxView Color="Gray" />
+                    <BoxView Color="Yellow" />
+                </StackLayout>
+            </StackLayout>
+        </Grid>
+        <StackLayout Orientation="Horizontal">
+            <Button Text="Prueba1" WidthRequest="100" HorizontalOptions="Center" />
+            <Button Text="Prueba2" WidthRequest="100" HorizontalOptions="Center" />
+            <Label Text="Hola mundo" VerticalOptions="Center" FontSize="Large" 
+                   FontAttributes="Bold"/>
+        </StackLayout>
+        <Entry Placeholder="Dirección" x:Name="placeHolderDireccion" />
+        <Editor Placeholder="Comentarios" HeightRequest="150" />
+        <Switch IsToggled="True"  Toggled="Switch_Toggled" x:Name="switchActivar"/>
+        <DatePicker />
+        <TimePicker />
+    </StackLayout>
+</ContentPage>

@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="HolaMundo.MainPage">
+
+    <StackLayout>
+        <!-- Place new controls here -->
+        <Label Text="¡Hola mundo de Xamarin.Forms!" 
+           HorizontalOptions="Center"
+           VerticalOptions="CenterAndExpand" />
+        <Editor HeightRequest="100" Placeholder="Comentarios"/>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="4*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Label Text="Me gusta: 0" HorizontalOptions="Center" 
+                   VerticalOptions="Center" x:Name="_textLikes"/>
+            <Button Text="+" Grid.Column="1" x:Name="_like"  
+                    Clicked="_like_Clicked"/>
+            <Button Text="-" Grid.Column="2" x:Name="_unLike" 
+                    Clicked="_unLike_Clicked"/>
+        </Grid>
+    </StackLayout>
+
+</ContentPage>
