@@ -27,13 +27,14 @@
             </StackLayout>
         </Grid>
         <StackLayout Orientation="Horizontal">
-            <Button Text="Prueba1" WidthRequest="100" HorizontalOptions="Center" />
-            <Button Text="Prueba2" WidthRequest="100" HorizontalOptions="Center" />
+            <Button Text="Direccion" WidthRequest="100" HorizontalOptions="Center" x:Name="MostrarDireccion" Clicked="MostrarDireccion_Clicked" />
+            <Button Text="Pregunta" WidthRequest="100" HorizontalOptions="Center" x:Name="ButtonPregunta" Clicked="ButtonPregunta_Clicked" />
+            <Button Text="Ciudad" x:Name="ButtonCiudad" Clicked="ButtonCiudad_Clicked"/>
             <Label Text="Hola mundo" VerticalOptions="Center" FontSize="Large" 
                    FontAttributes="Bold"/>
         </StackLayout>
         <Entry Placeholder="Dirección" x:Name="placeHolderDireccion" />
-        <Editor Placeholder="Comentarios" HeightRequest="150" />
+        <Editor Placeholder="Comentarios" HeightRequest="150" x:Name="EditorComentarios" />
         <Switch IsToggled="True"  Toggled="Switch_Toggled" x:Name="switchActivar"/>
         <DatePicker />
         <TimePicker />
