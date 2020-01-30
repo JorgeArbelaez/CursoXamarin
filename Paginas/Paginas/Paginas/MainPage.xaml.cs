@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Paginas.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -16,16 +17,25 @@ namespace Paginas
         public MainPage()
         {
             InitializeComponent();
-        }
-
-        private async void ButtonPage1_Clicked(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new Page1());
+            MessagingCenter.Subscribe<ContentPage, Libro>(this, "NuevoLibro", 
+                (sender_contentpage, arg_libro) =>
+                {
+                    Label label = new Label() { 
+                        Text = arg_libro.ToString() 
+                    };
+                    StackLibros.Children.Add(label);
+                }
+            );
         }
 
         private async void ButtonPage2_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new Page2());
+        }
+
+        private async void ButtonAgregar_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new PageNuevoLibro());
         }
     }
 }

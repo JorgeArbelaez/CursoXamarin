@@ -4,11 +4,14 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="Paginas.MainPage">
+             x:Class="Paginas.MainPage"
+             Title="Mis libros favoritos">
 
     <StackLayout>
-        <Button Text="Pagina 1" x:Name="ButtonPage1" Clicked="ButtonPage1_Clicked" />
-        <Button Text="Pagina 2" x:Name="ButtonPage2" Clicked="ButtonPage2_Clicked" />
+        <Button Text="Agregar" x:Name="ButtonAgregar" Clicked="ButtonAgregar_Clicked" />
+        <StackLayout x:Name="StackLibros">
+            
+        </StackLayout>
     </StackLayout>
 
 </ContentPage>
